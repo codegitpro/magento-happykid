@@ -1,0 +1,722 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Klassykid Magento2 Documentation</title>
+<link rel="alternate" type="application/rss+xml" title="frittt.com" href="feed/index.html">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> 
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prettify.css">
+</head>
+<body>
+<div class="wrapper">
+<!--
+<header>
+  <div class="container">
+    <h2 class="lone-header">Klassykid Magento2 Theme Documentation by templatetrend.com</a></h2>
+  </div>
+</header>-->
+<section>
+  <div class="container">
+    <ul class="docs-nav">
+	  <li class="logo"><strong><img src="img/logo.png" alt="logo" /></strong></li>
+      <li><strong>Getting Started</strong></li>
+      <li><a href="#welcome" class="cc-active">Welcome</a></li>
+      <li><a href="#features" class="cc-active">Features</a></li>
+      <li><a href="#license" class="cc-active">License</a></li>
+      <li class="separator"></li>
+      <li><strong>Customization</strong></li>
+      <li><a href="#view_type" class="cc-active">Theme Installation</a></li>
+      <li><a href="#homepage_settings" class="cc-active">Homepage Settings</a></li>
+      <li><a href="#static_settings" class="cc-active">Static Block Settings</a></li>
+      <li><a href="#support" class="cc-active">Support & Customizatoins</a></li>
+    </ul>
+    <div class="docs-content">
+	   <br/>
+		<h2 class="lone-header">Klassykid (Fashion Theme) Magento2 Theme Documentation by templatetrend.com</a></h2>
+	 
+      <h2> Getting Started</h2>
+      <h3 id="welcome"> Welcome</h3>
+      <p>We would like to thank you for purchasing Klassykid Magento2 theme!</p>
+      
+      <p> Before you get started, please be sure to always check out our documentation. It covers the installation and usage guide of Klassykid theme and gives answers to frequently questions. We would give  you all kinds of good information, and provide you with all the details you need to use this theme.Theme can only be used with Magento2  so we assume that you already have Magento2 installed and ready to go.
+
+If you are unable to find answer for your questions in our documentation, we encourage you to contact us through item support page with your site CPanel or Ftp detail and magento admin panel details</p>
+      
+     
+      <h3 id="features"> Features</h3>
+      <ul>
+        <li>Newsletter Popup Extension Included</li>
+		<li>Featured Product Extension Included</li>
+		<li>Special Product Extension Included</li>
+		<li>Bestseller Product Extension Included</li>
+		<li>New Product Extension Included</li>
+        <li>Advanced Menu Extension</li>
+		<li>Magefan Blog Extension Included</li>
+      </ul>
+      <h3 id="license"> License</h3>
+      <p>you can use this theme for only one magento store or one domain you can not use this for multi store or more than one domain.More about licence prefer this <a href="https://themeforest.net/licenses">link </a></p>
+      <hr>
+      <h2> Theme Customization</h2>
+      <p> Before you make any cusomization or even start using Our theme Installation please back your  store especially when you are working on a live site. Please don't ignore this stage
+        </p>
+      
+     
+      <h3 id="view_type">Theme Installation</h3>
+      <div class="themeinstall">
+	 		<ul>
+				<li><span>1) </span> First Go admin panel of magento go to system >> cache mangement and <strong>Disable all cache</strong>.
+						<br/>
+						<div><img src="screenshot/cache.jpg" alt="cache-disable" /></div>
+				</li>
+				<li><span>2) </span> <strong>Upload Theme Files</strong> to magento Directory (app folder) using cpanel or ftp accounts. 
+						<br/>
+						<div><img src="screenshot/ftp.jpg" alt="ftp" /></div>
+				</li>
+				
+				<li><span>3) </span> Active Theme Extensions, open command line in folder root of magento and run commands via ssh using putty or others, <strong>php bin/magento setup:upgrade</strong>. 
+				<br/>
+				<br/>
+						<div><img src="screenshot/putty.jpg" alt="Putty" /></div>
+				</li>
+				
+				<li><span>4) </span> Load Theme Static Content, open command line in folder root of magento and run commands via ssh using putty or others, <strong>php bin/magento setup:static-content:deploy</strong>. 
+				<br/>
+				<br/>
+						<div><img src="screenshot/putty2.jpg" alt="Putty" /></div>
+				</li>
+				
+				<li><span>5) </span>select <strong>"Template Trend Klassykid Store "</strong> theme in Content > Design > Configuration From Magento. 
+						<div><img src="screenshot/design.jpg" alt="Design Page" /></div>
+				</li>
+			 </ul>
+	  </div>
+	 
+	 
+	 <h3 id="homepage_settings">Home Page Settings</h3>
+		<div class="block">
+		<div class="heading"> <b>1) Home Page Coding</b></div>
+		<div> Go to Magento Admin panel <strong> Content >> Pages </strong> Click On Add New Pages. </div>
+		<div><img src="screenshot/homepage.jpg" alt="Home Page" /></div>
+		<div> Add below Code to  <strong> Content  </strong>of pages and save the page.</div>
+		<textarea class="data-text">
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_slider"}}</div>
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_shipping"}}</div>
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_subbanner"}}</div>
+<div>{{block class="Ortho\Featuredproduct\Block\Listhome" name="featured_product" template="Ortho_Featuredproduct::list_home.phtml"}}</div>
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_parallax"}}</div>
+<div>{{block class="Ortho\Newproduct\Block\Listhome" name="new_product" template="Ortho_Newproduct::list_home.phtml"}}</div>
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_testimonial"}}</div>
+<div class="bloghome">{{widget type="Magefan\Blog\Block\Widget\Recent" title="Latest News" number_of_posts="6"custom_template="Magefan_Blog::widget/list_home.phtml"}}</div>
+<div>{{block class="Magento\Cms\Block\Block" block_id="homepage_brand"}}</div>
+		</textarea>
+		
+		
+		<div> Your pages Look Like this. Save the Page</div>
+		<div><img src="screenshot/homepage-inner.jpg" alt="Home Page" /></div>
+		</div>
+	 
+	 
+<h3 id="static_settings">Static Block Setting</h3>
+
+<div class="static-block">
+
+<div class="static-block-inner">
+   <div class="heading"> <b>1) Home Page Slider Block</b></div>
+   <div> Go to Magento Admin panel <strong> Content >> Blocks </strong> Click On Add New Blocks. </div>
+   <div><img src="screenshot/blocks.jpg" alt="Static Block" /></div>
+   <div>Set below value</div>
+   
+   <div class="static-desc">Create Static Block For Home Page Main Slider.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Homepage Slider</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_slider</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="main-slider homepage-slider">
+<div class="owl-carousel homepage-carousel">
+<div class="item"><img class="img-leftbanner" src="{{view url='images/banners/main-banner1.jpg'}}" alt="main-banner1"></div>
+<div class="item"><img class="img-leftbanner" src="{{view url='images/banners/main-banner2.jpg'}}" alt="main-banner2"></div>
+<div class="item"><img class="img-leftbanner" src="{{view url='images/banners/main-banner3.jpg'}}" alt="main-banner3"></div>
+</div>
+</div>
+</textarea>
+   </div>
+<div> Your Blocks Look Like this And Save the Block</div>
+<div><img src="screenshot/blocks-inner.jpg" alt="Home Page" /></div>
+
+<div><strong>Repeat this step for below all static block</strong></div>
+</div>
+ 
+ 
+ 
+ 
+<div class="static-block-inner">
+   <div class="heading"> <b>2) Homepage SubBanner</b></div>
+   <div class="static-desc">Create Static Block For Home Page SubBanner.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Homepage SubBanner</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_subbanner</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div id="custom-bannerblock">
+<div class="container-width">
+<div class="row">
+<div class="subbannercms-inner">
+<div class="subbanner-common subbanner-right">
+<div class="subbanner-inner right-inner">
+<div class="right-top">
+<div class="right-top-inner subbanner-inner"><a href="#"> <img class="leftbanner" src="{{view url='images/banners/sub-banner1.jpg'}}" alt="sub-banner"> </a></div>
+</div>
+<div class="right-bottom">
+<div class="right-bottom-inner subbanner-inner"><a href="#"> <img class="leftbanner" src="{{view url='images/banners/sub-banner2.jpg'}}" alt="sub-banner"> </a></div>
+</div>
+</div>
+</div>
+<div class="subbanner-common subbanner-left">
+<div class="subbanner-inner left-inner"><a href="#"> <img class="leftbanner" src="{{view url='images/banners/sub-banner3.jpg'}}" alt="sub-banner"> </a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>3) Footer Middle Section4</b></div>
+   <div class="static-desc">Create Static Block For Footer Middle Section4 Block.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer Middle Section3</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_middle_section4</div>
+   <div class="static-data">
+     <div> Click on Show/hide editor</div>
+     <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+  <div class="content">
+<textarea class="data-text">
+<div class="footer-common collapsible mobile-collapsible">
+<div class="footer-static">
+<h5>Services</h5>
+<ul class="clearfix footer-content">
+<li><a href="#">Your Orders</a></li>
+<li><a href="#">Your Wishlist</a></li>
+<li><a href="#">Payment Methods</a></li>
+<li><a href="#">Delivery</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Portfolio</a></li>
+</ul>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>4) Homepage Brand</b></div>
+   <div class="static-desc">Create Static Block For Home Page Brand Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Homepage Brand</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_brand</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="common-slider-outer">
+<div class="brand-outer common-slider  container-width">
+<div class="row">
+<div class="col-lg-12  col-md-12  col-sm-12  col-xs-12">
+<div class="brand-carousel owl-carousel">
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo1.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo2.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo3.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo4.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo5.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo6.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo7.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo8.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+<div class="item">
+<div class="image"><a title="Bramdlogo " href="#"><img class="img-responsive" src="{{view url='images/brand/blogo9.png'}}" alt="Bramdlogo " /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>5) Footer middle Section1</b></div>
+   <div class="static-desc">Create Static Block For Footer middle Section1  Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer middle Section1</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_middle_section1</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+<div class="content">
+<textarea class="data-text">
+<div class="footer-common collapsible mobile-collapsible">
+<div class="footer-static">
+<h5>Address</h5>
+<ul class="clearfix footer-content address-footer">
+<li class="item">
+<div class="contact_inner">Auto hand wash is an eco-friendly hand car watch and detailing service based in portland.</div>
+</li>
+<li class="item"><img class="img-leftbanner" src="{{view url='images/footer-logo.png'}}" alt="main-banner1"></li>
+</ul>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>6) Footer Middle Section2</b></div>
+   <div class="static-desc">Create Static Block For Footer Middle Section2 Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer Middle Section2</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_middle_section2</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="footer-common collapsible mobile-collapsible">
+<div class="footer-static">
+<h5>Products</h5>
+<ul class="clearfix footer-content">
+<li class="item"><a href="#">Delivery Information</a></li>
+<li class="item"><a href="#">Privacy Policy</a></li>
+<li class="item"><a href="#">Terms &amp; Conditions</a></li>
+<li class="item"><a href="#">Contact Us</a></li>
+<li class="item"><a href="#">Site Map</a></li>
+</ul>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+<div class="static-block-inner">
+   <div class="heading"> <b>7) Footer Middle Section3</b></div>
+   <div class="static-desc">Create Static Block For Footer Middle Section3 Block.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer Middle Section3</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_middle_section3</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+  <div class="content">
+<textarea class="data-text">
+<div class="footer-common collapsible mobile-collapsible">
+<div class="footer-static">
+<h5 class="toggle-active">Our Company</h5>
+<ul class="clearfix footer-content">
+<li class="item"><a href="#">Secure Payment</a></li>
+<li class="item"><a href="#">Free Shipping</a></li>
+<li class="item"><a href="#">New Products</a></li>
+<li class="item"><a href="#">Our Lookbook</a></li>
+<li class="item"><a href="#">About Us</a></li>
+<li class="item"><a href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>8) Footer socialicon</b></div>
+   <div class="static-desc">Create Static Block For Footer socialicon.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer socialicon</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_socialicon</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<ul class="social-icon">
+<li><a class="facebook" title="Facebook" href="#"> &nbsp;</a></li>
+<li><a class="twitter" title="Twitter" href="#"> &nbsp;</a></li>
+<li><a class="linkedin" title="Linkedin" href="#"> &nbsp;</a></li>
+<li><a class="rss" title="RSS" href="#"> &nbsp;</a></li>
+<li><a class="pinterest" title="Pinterest" href="#"> &nbsp;</a></li>
+</ul>
+</textarea>
+   </div>
+</div>
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>9) Footer Payment</b></div>
+   <div class="static-desc">Create Static Block For Footer Payment Section Block.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer Payment</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_payment</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="payment">
+<ul class="payment_icon">
+<li class="discover"><a href="#"><img class="img-payment" src="{{view url='images/payment1.png'}}" alt="Payment"></a></li>
+<li class="visa"><a href="#"><img class="img-payment" src="{{view url='images/payment2.png'}}" alt="Payment"></a></li>
+<li class="mastro"><a href="#"><img class="img-payment" src="{{view url='images/payment3.png'}}" alt="Payment"></a></li>
+<li class="paypal"><a href="#"><img class="img-payment" src="{{view url='images/payment4.png'}}" alt="Payment"></a></li>
+</ul>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>10) Footer Middle Section5</b></div>
+   <div class="static-desc">Create Static Block For Footer Middle Section5 Block Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Footer Middle Section5</div>
+   <div class="static-id"><strong>Static Block Id: </strong>footer_middle_section5</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<p>{{block class="Magento\Newsletter\Block\Subscribe" template="subscribe_footer.phtml"}}</p>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>11)Newsletter Popup</b></div>
+   <div class="static-desc">Create Static Block For Newsletter Popup Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Newsletter Popup</div>
+   <div class="static-id"><strong>Static Block Id: </strong>newsletter_popup</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="popup-inner">
+<div class="popup-background-inner">{{block class="Magento\Newsletter\Block\Subscribe" template="subscribe_popup.phtml"}}</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>12)Newsletter Text Popup</b></div>
+   <div class="static-desc">Create Static Block For Newsletter Text Popup Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Newsletter Text Popup</div>
+   <div class="static-id"><strong>Static Block Id: </strong>newsletter_text_popup</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="popup-text">
+<div class="popup-image"><img class="img" src="{{view url='images/email.png'}}" alt="sub-banner" /></div>
+<div class="popup-title">subscribe Emails</div>
+<div>Get Latest News &amp; Update</div>
+<div class="popup-desc">also the leap into electronic typesetting, remaining essentially</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>13) Left Banner Block</b></div>
+   <div class="static-desc">Create Static Block For Left Banner Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Left Banner Block</div>
+   <div class="static-id"><strong>Static Block Id: </strong>left_banner_common</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<p><a href="#"> <img class="left-banner" src="{{view url='images/left-banner.jpg'}}" alt="left-banner" /> </a></p>
+</textarea>
+   </div>
+</div>
+
+<div class="static-block-inner">
+   <div class="heading"> <b>14) Product Custom Block</b></div>
+   <div class="static-desc">Create Static Block For Product Custom Section.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Product Custom Block</div>
+   <div class="static-id"><strong>Static Block Id: </strong>product_custom_block</div>
+   <div class="static-data">
+     <div> Click on Show/hide editor</div>
+     <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="product product-custom-block">
+<div class="home-tab-container">
+<ul class="home-tab home-tab-main">
+<li class="active"><a href="#tab1" data-toggle="tab">Delivery</a></li>
+<li><a href="#tab2" data-toggle="tab">Shipping</a></li>
+<li><a href="#tab3" data-toggle="tab">Size Guide</a></li>
+</ul>
+<div class="tab-content">
+<div id="tab1" class="tab-pane fade in active">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</div>
+<div id="tab2" class="tab-pane fade">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text ll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary making this the first true generator on the Internet.</div>
+<div id="tab3" class="tab-pane fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>15) Product Tab Block</b></div>
+   <div class="static-desc">Create Static Block For Product Page Custom tab.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Product Tab Block</div>
+   <div class="static-id"><strong>Static Block Id: </strong>product_custom_tab</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="custom-tab">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+</textarea>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="static-block-inner">
+   <div class="heading"> <b>16) Homepage Shipping</b></div>
+   <div class="static-desc">Create Static Block For Homepage Shipping</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Homepage Shipping</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_shipping</div>
+   <div class="static-data">
+	   <div> Click on Show/hide editor</div>
+	   <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="shipping-outer">
+<div class="container">
+<div class="shipping-inner">
+<div class="subtitle-part subtitle-part1">
+<div class="subbanner-part-maininnner1">
+<div class="subicon subicon1"><span class="hide">icon</span></div>
+<div class="shipping-desc">
+<div class="subtitile subtitile1">Free shipping</div>
+<div class="subtitile subtitile2">Shipping in world for orders over $99</div>
+</div>
+</div>
+</div>
+<div class="subtitle-part subtitle-part2">
+<div class="subbanner-part-maininnner2">
+<div class="subicon subicon2"><span class="hide">icon</span></div>
+<div class="shipping-desc">
+<div class="subtitile subtitile1">Special Gift</div>
+<div class="subtitile subtitile2">Special Gift for new member</div>
+</div>
+</div>
+</div>
+<div class="subtitle-part subtitle-part3">
+<div class="subbanner-part-maininnner3">
+<div class="subicon subicon3"><span class="hide">icon</span></div>
+<div class="shipping-desc">
+<div class="subtitile subtitile1">Support online 24/7</div>
+<div class="subtitile subtitile2">Call : (123) 456 789 911</div>
+</div>
+</div>
+</div>
+<div class="subtitle-part subtitle-part4">
+<div class="subbanner-part-maininnner4">
+<div class="subicon subicon4"><span class="hide">icon</span></div>
+<div class="shipping-desc">
+<div class="subtitile subtitile1">Security Payment</div>
+<div class="subtitile subtitile2">Embarrassing hidden middle</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+ 
+ </div>
+ 
+
+
+ <div class="static-block-inner">
+   <div class="heading"> <b>17) Homepage Testimonial Block</b></div>
+   <div class="static-desc">Create Static Block For Homepage Testimonial Block.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>homepage_testimonial</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_testimonial</div>
+   <div class="static-data">
+     <div> Click on Show/hide editor</div>
+     <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="testimonial-inner ">
+<div class="testimonial-outer container-width">
+<div class="owl-carousel testimonial-carousel">
+<div class="item">
+<div class="testminial-data">
+<div class="test_imag">
+<div class="test_img_innar"><img class="img-testimonial" src="{{view url='images/testimonial_img1.jpg'}}" alt="main-banner1"></div>
+</div>
+<div class="testimonial-desc">make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries,</div>
+<div class="testmonial-author">Wed Censtoriya</div>
+</div>
+</div>
+<div class="item">
+<div class="testminial-data">
+<div class="test_imag">
+<div class="test_img_innar"><img class="img-testimonial" src="{{view url='images/testimonial_img2.jpg'}}" alt="main-banner1"></div>
+</div>
+<div class="testimonial-desc">Contrary to popular belief, Lorem Ipsum is not simply random text centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries,</div>
+<div class="testmonial-author">Wed Censtoriya</div>
+</div>
+</div>
+<div class="item">
+<div class="testminial-data">
+<div class="test_imag">
+<div class="test_img_innar"><img class="img-testimonial" src="{{view url='images/testimonial_img3.jpg'}}" alt="main-banner1"></div>
+</div>
+<div class="testimonial-desc">Contrary to popular belief, Lorem Ipsum is not simply random text centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries,</div>
+<div class="testmonial-author">Wed Censtoriya</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+
+ <div class="static-block-inner">
+   <div class="heading"> <b>18)Homepage Parallax</b></div>
+   <div class="static-desc">Create Static Block For Homepage Parallax.</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Homepage Parallax</div>
+   <div class="static-id"><strong>Static Block Id: </strong>homepage_parallax</div>
+   <div class="static-data">
+     <div> Click on Show/hide editor</div>
+     <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+<div class="parallaxblock-outer" data-source-url="{{view url='images/parallax.jpg'}}">
+<div class="parallaxblock-inner container">
+<div class="parallax-block">
+<div class="parallax-inner container-width">
+<div class="parallax-text1">Sale</div>
+<div class="parallax-text2">up to 50% off</div>
+<div class="parallax-text3">Free shipping on orders of $100</div>
+<div class="parallax-text4"><a href="#">Shop Now</a></div>
+</div>
+</div>
+</div>
+</div>
+</textarea>
+   </div>
+</div>
+
+ <div class="static-block-inner">
+   <div class="heading"> <b>19) Advancemenu bottom block 68 </b></div>
+   <div class="static-desc">Create Static Block For Advancemenu bottom block 68</div>
+   <div class="static-name"><strong>Static Block Name: </strong>Advancemenu bottom block 68</div>
+   <div class="static-id"><strong>Static Block Id: </strong>advancemenu_bottom_block_68</div>
+   <div class="static-data">
+     <div> Click on Show/hide editor</div>
+     <div> Add below Code to  <strong> Editor  </strong>of the Block and save the Block.</div>
+   </div>
+   <div class="content">
+<textarea class="data-text">
+	<div class="menu-banner-image"><img src="{{view url='images/menu-banner.jpg'}}" alt=""></div>
+</textarea>
+   </div>
+
+		<h3 id="support">Support & Customization</h3>
+		Please, submit a request – We care for every detail You provided.
+		<div>we’ll get back to you ASAP.</div>
+		<a href="http://templatetrend.com/support/">SUBMIT A REQUEST</a>
+		<p class="alert alert-danger">Please contact us via Email : bestmagento2theme@gmail.com, we will reply to you very soon </p>
+
+
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="">
+    <h4>Again thank you for purchasing Klassykid Magento2 theme!. If You Like our Theme Please Give Us rating On Themeforest. Still If You have Question Contact Us on Our<a href="http://templatetrend.com/support/">Ticket System.</a></h4>
+  </div>
+</section>
+<footer>
+  <div class="">
+    <p> &copy; Copyright Template Trend Theme. All Rights Reserved.</p>
+  </div>
+</footer>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/prettify/prettify.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

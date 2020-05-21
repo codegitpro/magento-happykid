@@ -1,0 +1,1 @@
+ssh -i "new_key.pem" ubuntu@ec2-3-106-57-119.ap-southeast-2.compute.amazonaws.com
